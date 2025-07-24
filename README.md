@@ -2,7 +2,15 @@
 
 ## Overview
 
-This project implements a **sign language detection** system utilizing a Long Short-Term Memory (LSTM) deep learning model. The aim is to accurately recognize and classify sign language gestures from video input, helping bridge the communication gap for hearing-impaired individuals.
+This project implements a **sign language detection** system utilizing a Long Short-Term Memory (LSTM) deep learning model. The aim is to accurately recognize and classify sign language gestures from video input, helping bridge the communication gap for hearing-impaired individuals. 
+
+Reads your hand signs and translates them to English words using Tensorflow object detection API
+The model is built using transfer learning from pretrained model ssd_mobilenet model
+The dataset is made manually by running the Image Collection python file that collects images from your webcam for all the mentioned below signs in the American Sign Language :
+
+The image annotations is done with the help of LabelImage file which you can use by simply git cloning the following:
+Git link
+
 
 ## Features
 
@@ -96,8 +104,5 @@ Contributions are welcome! To contribute:
 - Commit your changes and push to your fork.
 - Create a pull request for review.
 
-## License
-
-This project is licensed under the MIT License.
-
-For any queries, feel free to open an issue or contact the maintainer.
+The model was made only with help of [Nicholas Renotte tutorial] (https://youtu.be/pDXdlXlaCco)
+He's an inspiration!
