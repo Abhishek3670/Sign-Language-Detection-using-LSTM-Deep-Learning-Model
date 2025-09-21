@@ -1,0 +1,30 @@
+# GPU-enabled requirements for CUDA 12.1 compatible systems
+# Note: As of 2025, TensorFlow wheels on PyPI may not include CUDA 12.1 support
+# This configuration provides the best available GPU acceleration
+
+# Core TensorFlow with explicit version
+tensorflow==2.15.0
+# Try alternate installation method if above fails
+# pip install tensorflow[and-cuda]==2.15.0
+
+# Core dependencies
+streamlit>=1.49.0
+opencv-python>=4.8.0
+mediapipe==0.10.7
+scikit-learn>=1.3.0
+matplotlib>=3.7.0
+numpy==1.26.0
+protobuf<4.0.0
+plotly>=5.0.0
+pandas>=1.5.0
+pillow>=8.0.0
+
+# CUDA compatibility note:
+# If GPU is not detected with CUDA 12.1, consider:
+# 1. Installing CUDA 11.8 alongside 12.1
+# 2. Using WSL2 with Linux TensorFlow builds
+# 3. Building TensorFlow from source for CUDA 12.1
+# 4. Waiting for official TensorFlow CUDA 12.1 support
+
+# Manual CUDA DLL path (Windows specific)
+# Set in Python: os.add_dll_directory(r'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.1\bin')
